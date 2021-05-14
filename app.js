@@ -19,7 +19,11 @@ calculateButton.addEventListener("click", function () {
 
   output.classList.remove("hidden");
 
-  if (days >= 1) {
+  if (size === 0 || speed === 0) {
+    output.innerHTML = `<h4>
+    Please enter the internet speed and file size
+  </h4>`;
+  } else if (days >= 1) {
     output.innerHTML = `<h4>
     Your file of ${downloadSize.value}GB will Download in ${days}days ${hour}hour ${seconds}minutes and ${seconds}seconds
   </h4>`;
